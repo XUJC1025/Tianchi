@@ -1,0 +1,6 @@
+/data
+run/
+*.pth
+*.png
+__pycache__/
+*.pyc
