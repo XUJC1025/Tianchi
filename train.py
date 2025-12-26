@@ -179,6 +179,6 @@ if __name__ == "__main__":
     net = Unet().to(device)
     data_path = "./data"  # 改成你的数据路径
     save_path = "./run1"
-    train_net(net, device, data_path, save_path, epochs=40, batch_size=5, lr=1e-5)
+    train_net(net, device, data_path, save_path, epochs=40, batch_size=8, lr=1e-5)
 
 
