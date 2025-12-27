@@ -54,7 +54,7 @@ def dice_coeff(pred, target, smooth=1e-6):
     pred = torch.sigmoid(pred)
     pred = (pred > 0.5).float()
     intersection = (pred * target).sum()
-    return (2. * intersection + smooth) / (pred.sum() + target.sum() +mooth)
+    return (2. * intersection + smooth) / (pred.sum() + target.sum() + smooth)
 
 def train_net(net, device, data_path, save_path, epochs=40, batch_size=3, lr=1e-5):
 
@@ -179,6 +179,7 @@ if __name__ == "__main__":
     net = Unet().to(device)
     data_path = "./data"  # 改成你的数据路径
     save_path = "./run1"
-    train_net(net, device, data_path, save_path, epochs=40, batch_size=4, lr=1e-5)
+    train_net(net, device, data_path, save_path, epochs=1, batch_size=5, lr=1e-5)
+
 
 
